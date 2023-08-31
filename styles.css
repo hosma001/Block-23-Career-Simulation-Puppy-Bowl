@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    columns: black;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: lightgray;
+    border-radius: .5rem;
+
+}
+
+a:active {
+    background-color: darkgray;
+}
+
+.selected {
+    background-color: darkgray;
+    border-radius: .5rem;
+}
+
+@media {
+    width: 400px;
+    flex-direction column; 
+}
