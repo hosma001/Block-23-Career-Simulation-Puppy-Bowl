@@ -23,14 +23,16 @@ function render(){
     }).join('');
     players.innerHTML = html;
 
-    pup = puppies.find(pup => pup.id === hash);
+    const pup = puppies.find(pup => pup.id === hash);
 
-    const detailHtml = `
-        Breed: ${pup.breed}
-        Status: ${pup.status}
-        
-    `;
-
+    let detailHtml = '';
+    if(pup){
+        detailHtml = `
+        <div id='pupBreed'> Breed: ${ pup.breed } </div>
+        <div id='pupStatus'> Status: ${ pup.status } </div>
+        <div id='pupImg'><img src="${ pup.imageUrl }" width=50%; height=50%;></div>
+        `;
+    }
     detail.innerHTML = detailHtml;
 };
 

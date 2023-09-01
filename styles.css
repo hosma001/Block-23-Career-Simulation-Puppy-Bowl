@@ -2,33 +2,75 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#detail > #pupImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#detail > #pupBreed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-size-adjust: 10px;
+}
+
+#detail > #pupStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#grad {
+    height: 50px;
+    background-image: linear-gradient(to bottom right, #D4145A , #FBB03B);
+}
+
+h1 {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: #2E3192;
+}
+
+
 nav {
+    margin: auto;
     display: flex;
     justify-content: space-around;
+    padding: 10px;
+    height: 25px;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #2E3192 , #1BFFFF);
+    /*background-color: #D9DAD9;*/
 }
 
 a {
     columns: black;
     text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 a:hover {
-    background-color: lightgray;
-    border-radius: .5rem;
-
+    background-color: #00BFFF;
 }
 
 a:active {
-    background-color: darkgray;
+    background-color: w#1E90FF;
 }
 
 .selected {
-    background-color: darkgray;
-    border-radius: .5rem;
+    background-color: #1E90FF;
 }
 
 @media (max-width: 400px){
     nav {
         flex-direction: column;
+        flex-wrap: wrap;
     }
 }
