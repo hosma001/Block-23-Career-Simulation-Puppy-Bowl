@@ -27,7 +27,8 @@ a:active {
     border-radius: .5rem;
 }
 
-@media {
-    width: 400px;
-    flex-direction column; 
+@media (max-width: 400px){
+    nav {
+        flex-direction: column;
+    }
 }

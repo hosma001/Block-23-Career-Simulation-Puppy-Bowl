@@ -1,4 +1,5 @@
 const players = document.getElementById("players");
+const detail = document.getElementById("detail");
 
 let puppies;
 
@@ -7,22 +8,31 @@ async function fetchPuppies() {
     const json = await response.json();
     puppies = json.data.players;
     render();
-}
+};
 
 fetchPuppies();
 
 function render(){
     const hash = window.location.hash.slice(1)*1;
-    console.log(hash);
     const html = puppies.map(pups => {
         return `
-                <a href='#${pups.id}' class = '${pups.id === hash ? 'selected': ''}'>
+                <a href='#${pups.id !== hash ? pups.id : ''}' class = '${pups.id === hash ? 'selected': ''}'>
                 ${pups.name}
                 </a>      
         `;
     }).join('');
     players.innerHTML = html;
-}
+
+    pup = puppies.find(pup => pup.id === hash);
+
+    const detailHtml = `
+        Breed: ${pup.breed}
+        Status: ${pup.status}
+        
+    `;
+
+    detail.innerHTML = detailHtml;
+};
 
 window.addEventListener('hashchange', () => {
     render();
