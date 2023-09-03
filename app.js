@@ -25,7 +25,7 @@ function render(){
 
     const pup = puppies.find(pup => pup.id === hash);
 
-    let detailHtml = '';
+    let detailHtml = 'Select a Player!';
     if(pup){
         detailHtml = `
         <div id='pupBreed'> Breed: ${ pup.breed } </div>
